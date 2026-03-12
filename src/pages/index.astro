@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro'
+import Header from '../components/layout/Header.astro'
+import Footer from '../components/layout/Footer.astro'
+
+const features = [
+  { title: 'Lightning Fast', description: 'Built on Astro with server-side rendering and React islands for optimal performance.' },
+  { title: 'Authentication', description: 'Email/password auth with session-based security — ready to extend with OAuth.' },
+  { title: 'Database Ready', description: 'Prisma ORM with PostgreSQL — type-safe queries and easy migrations.' },
+  { title: 'Payments', description: 'Stripe integration pre-wired — subscriptions, one-time payments, webhooks.' },
+  { title: 'Email', description: 'Resend for transactional emails — welcome, password reset, notifications.' },
+  { title: 'Deploy Anywhere', description: 'Docker-ready with GitHub Actions CI/CD — push to main and ship.' },
+]
+---
+
+<Base title="VibeCoder App">
+  <div class="flex min-h-screen flex-col">
+    <Header />
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="relative overflow-hidden px-4 py-24 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl text-center">
+          <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+            Build your next
+            <span class="text-primary-600 dark:text-primary-400">web app</span>
+            in minutes
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+            A production-ready full-stack starter with authentication, database,
+            payments, email, and file uploads — all pre-configured and ready to go.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-4">
+            <a
+              href="/register"
+              class="rounded-lg bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-700"
+            >
+              Get started
+            </a>
+            <a
+              href="/login"
+              class="rounded-lg px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 hover:bg-gray-50 dark:text-gray-100 dark:ring-gray-700 dark:hover:bg-gray-900"
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section class="px-4 py-24 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Everything you need</h2>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+              All the essentials for building a modern web application.
+            </p>
+          </div>
+          <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => (
+              <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
+                <h3 class="text-lg font-semibold">{feature.title}</h3>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="px-4 py-24 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl rounded-2xl bg-primary-600 px-8 py-16 text-center dark:bg-primary-700">
+          <h2 class="text-3xl font-bold tracking-tight text-white">Ready to start building?</h2>
+          <p class="mt-4 text-lg text-primary-100">Create your account and start shipping features today.</p>
+          <a
+            href="/register"
+            class="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-sm hover:bg-primary-50"
+          >
+            Get started for free
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</Base>

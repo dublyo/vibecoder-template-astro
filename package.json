@@ -1,0 +1,46 @@
+{
+  "name": "vibecoder-template-astro",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@astrojs/node": "latest",
+    "@astrojs/react": "latest",
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "^7.4.2",
+    "@tanstack/react-query": "^5.90.21",
+    "astro": "^6.0.3",
+    "bcryptjs": "^3.0.2",
+    "better-auth": "latest",
+    "clsx": "^2.1.1",
+    "ioredis": "^5.6.1",
+    "lucide-react": "^0.577.0",
+    "pg": "^8.20.0",
+    "prisma": "^7.4.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "resend": "^6.9.3",
+    "sonner": "^2.0.7",
+    "stripe": "^20.4.1",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.3.6"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/pg": "^8.15.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  }
+}

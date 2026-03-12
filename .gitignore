@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# astro
+dist/
+.astro/
+
+# misc
+.DS_Store
+*.pem
+
+# env
+.env
+.env*.local
+
+# prisma
+prisma/generated/
+
+# debug
+npm-debug.log*

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+
+  /* Shuffle primary palette — centered on #382CDD */
+  --color-primary-50: #f0eeff;
+  --color-primary-100: #ddd8ff;
+  --color-primary-200: #beb2ff;
+  --color-primary-300: #9a87ff;
+  --color-primary-400: #7a5fff;
+  --color-primary-500: #5a3cf5;
+  --color-primary-600: #382CDD;
+  --color-primary-700: #2d23b5;
+  --color-primary-800: #221a8c;
+  --color-primary-900: #181163;
+  --color-primary-950: #0d0a3a;
+
+  /* Semantic colors */
+  --color-info: #2D70F5;
+  --color-success: #17BB84;
+  --color-warning: #F67A28;
+  --color-danger: #E85444;
+
+  /* Card shadow from Shuffle */
+  --shadow-card: 0px 4px 8px -4px rgba(21, 24, 28, 0.08);
+}
