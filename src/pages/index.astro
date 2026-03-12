@@ -5,15 +5,12 @@ import Footer from '../components/layout/Footer.astro'
 
 const features = [
   { title: 'Lightning Fast', description: 'Built on Astro with server-side rendering and React islands for optimal performance.' },
-  { title: 'Authentication', description: 'Email/password auth with session-based security — ready to extend with OAuth.' },
   { title: 'Database Ready', description: 'Prisma ORM with PostgreSQL — type-safe queries and easy migrations.' },
-  { title: 'Payments', description: 'Stripe integration pre-wired — subscriptions, one-time payments, webhooks.' },
-  { title: 'Email', description: 'Resend for transactional emails — welcome, password reset, notifications.' },
   { title: 'Deploy Anywhere', description: 'Docker-ready with GitHub Actions CI/CD — push to main and ship.' },
 ]
 ---
 
-<Base title="VibeCoder App">
+<Base title="My App">
   <div class="flex min-h-screen flex-col">
     <Header />
 
@@ -27,23 +24,8 @@ const features = [
             in minutes
           </h1>
           <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-            A production-ready full-stack starter with authentication, database,
-            payments, email, and file uploads — all pre-configured and ready to go.
+            A clean full-stack starter with Astro, React, Tailwind, and Prisma — ready to build on.
           </p>
-          <div class="mt-10 flex items-center justify-center gap-4">
-            <a
-              href="/register"
-              class="rounded-lg bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-700"
-            >
-              Get started
-            </a>
-            <a
-              href="/login"
-              class="rounded-lg px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 hover:bg-gray-50 dark:text-gray-100 dark:ring-gray-700 dark:hover:bg-gray-900"
-            >
-              Sign in
-            </a>
-          </div>
         </div>
       </section>
 
@@ -64,20 +46,6 @@ const features = [
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <!-- CTA Section -->
-      <section class="px-4 py-24 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl rounded-2xl bg-primary-600 px-8 py-16 text-center dark:bg-primary-700">
-          <h2 class="text-3xl font-bold tracking-tight text-white">Ready to start building?</h2>
-          <p class="mt-4 text-lg text-primary-100">Create your account and start shipping features today.</p>
-          <a
-            href="/register"
-            class="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-sm hover:bg-primary-50"
-          >
-            Get started for free
-          </a>
         </div>
       </section>
     </main>

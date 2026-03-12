@@ -1,12 +1,11 @@
 ---
 import '../styles/global.css'
-import ToastProvider from '../components/ui/ToastProvider'
 
 interface Props {
   title?: string
 }
 
-const { title = 'VibeCoder App' } = Astro.props
+const { title = 'My App' } = Astro.props
 ---
 
 <!doctype html>
@@ -19,6 +18,5 @@ const { title = 'VibeCoder App' } = Astro.props
   </head>
   <body class="min-h-screen bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100">
     <slot />
-    <ToastProvider client:load />
   </body>
 </html>
