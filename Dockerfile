@@ -1,8 +1,8 @@
 # Stage 1: Install dependencies
 FROM node:22-bookworm-slim AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci --ignore-scripts
+COPY package.json package-lock.json* ./
+RUN npm install --ignore-scripts
 COPY prisma ./prisma
 RUN npx prisma generate
 
