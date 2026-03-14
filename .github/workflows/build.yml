@@ -3,6 +3,7 @@ name: Build & Push to GHCR
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -46,3 +47,12 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Notify VibeCoder
+        if: always() && vars.VIBECODER_URL != ''
+        continue-on-error: true
+        run: |
+          curl -sf -X POST "${{ vars.VIBECODER_URL }}/api/vibecoder/webhook/github" \
+            -H "Authorization: Bearer ${{ vars.DEPLOY_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"repo\":\"${{ github.repository }}\",\"sha\":\"${{ github.sha }}\",\"status\":\"${{ job.status == 'success' && 'success' || 'failure' }}\",\"runId\":\"${{ github.run_id }}\"}"
